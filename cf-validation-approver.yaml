@@ -15,7 +15,7 @@ Resources:
   SESCustomResourceFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Runtime: nodejs8.10
+      Runtime: nodejs12.x
       Handler: ses-cloudformation.handler
       Timeout: 30
       Role: !GetAtt SESCustomResourceFunctionRole.Arn
@@ -38,7 +38,7 @@ Resources:
   Function:
     Type: AWS::Serverless::Function
     Properties:
-      Runtime: nodejs8.10
+      Runtime: nodejs12.x
       Handler: index.handler
       Timeout: 10
       Role: !GetAtt FunctionRole.Arn
